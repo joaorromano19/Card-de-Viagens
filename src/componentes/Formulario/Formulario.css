@@ -1,0 +1,74 @@
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+.formulario form {
+    max-width: 80%;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 36px 64px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.formulario h2 {
+    color: #212121;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .formulario {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .formulario h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulario {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .formulario h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animações para os campos do formulário */
+.formulario input,
+.formulario select {
+    transition: all 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Feedback visual para o botão */
+.formulario button {
+    transition: all 0.3s ease;
+}
+
+.formulario button:hover {
+    transform: translateY(-2px);
+}
+
+.formulario button:active {
+    transform: translateY(0);
+}

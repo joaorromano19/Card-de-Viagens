@@ -1,0 +1,35 @@
+.continente{
+    text-align: center;
+    padding: 32px;
+}
+
+.continente h3{
+    font-size: 42px;
+    border-bottom: 4px solid;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.continente .lugares{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+/* Animações */
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.continente .lugares > * {
+    animation: cardAppear 0.5s ease-out forwards;
+    animation-delay: calc(var(--index) * 0.1s);
+}
